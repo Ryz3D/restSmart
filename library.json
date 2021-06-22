@@ -1,0 +1,24 @@
+{
+    "name": "RestSmart",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "description": "Hosts a REST Server on an ESP32 to set variables of different types. Compatible with openHAB HTTP Binding.",
+    "keywords": ["REST", "Smart Home"],
+    "authors": {
+        "name": "Mirco Heitmann",
+        "email": "mirco.heitmann@gmail.com",
+        "url": ""
+    },
+    "frameworks": [
+        "Arduino"
+    ],
+    "platforms": [
+        "espressif32"
+    ],
+    "dependencies": {
+        "ottowinter/ESPAsyncWebServer-esphome": "^1.2.7"
+    }
+}

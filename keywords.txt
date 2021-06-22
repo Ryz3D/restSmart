@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For Wire
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getSize	KEYWORD2
+read	KEYWORD2
+write	KEYWORD2
+stringify	KEYWORD2
+updateProps	KEYWORD2
+loop	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+PropColor	KEYWORD2
+Prop	KEYWORD2
+RestSmart	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
