@@ -24,7 +24,7 @@ This is done most easily via Postman, where you can put the data to be set in th
 
 ## Connect to openHAB
 
-### NOTE: There was a bug with the HTTP Binding so it would parse any valid RGB color value to "UNDEF". I fixed this in [Pull Request #10897](https://github.com/openhab/openhab-addons/pull/10897), so the fix will appear in openHAB version 3.1. For now you have to compile the http binding yourself and place the resulting .jar into the openHAB addons folder.
+### NOTE: There was a bug with the HTTP Binding so it would parse any valid RGB color value to "UNDEF". I fixed this in [Pull Request #10897](https://github.com/openhab/openhab-addons/pull/10897), so the fix will appear in openHAB version 3.1. 
 
 1. Install [HTTP Binding](https://www.openhab.org/addons/bindings/http/)
 2. Add new HTTP thing with baseURL ``http://devicename/`` where devicename is the wifiHostname specified in your ESP32 sketch
