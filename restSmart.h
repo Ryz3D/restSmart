@@ -1,8 +1,20 @@
 #pragma once
 
-#define RESTSMART_DEBUG true
+#ifndef RESTSMART_PORT
+#define RESTSMART_PORT 80
+#endif
+
+#ifndef RESTSMART_DEBUG
+#define RESTSMART_DEBUG false
+#endif
+
+#ifndef DISABLE_EEPROM
 #define DISABLE_EEPROM false
+#endif
+
+#ifndef STRING_BUFFER
 #define STRING_BUFFER 10
+#endif
 
 #include <Arduino.h>
 #include <WiFi.h>
@@ -14,7 +26,8 @@
 #include <EEPROM.h>
 #endif
 
-enum PropType {
+enum PropType
+{
   Invalid,
   Bool,
   Float,
@@ -23,18 +36,21 @@ enum PropType {
   Str,
 };
 
-class PropColor {
+class PropColor
+{
 public:
   PropColor(uint8_t r, uint8_t g, uint8_t b);
 
   uint8_t r, g, b;
 };
 
-class Prop {
+class Prop
+{
 public:
   uint8_t getSize();
   void read();
   void write();
+  void setFromBuffer();
   String stringify();
 
   String id;
@@ -51,18 +67,19 @@ public:
   String *valueStr;
 };
 
-class RestSmart {
+class RestSmart
+{
 public:
   void updateProps();
   void loop();
 
-  AsyncWebServer server = AsyncWebServer(WIFI_PORT);
+  AsyncWebServer server = AsyncWebServer(80);
   std::vector<Prop> props;
   uint16_t eepromStart;
   String wifiSSID;
   String wifiPassword;
   String wifiHostname;
-  uint32_t wifiPort = 80;
+
 private:
   String stringify();
   void connect();
